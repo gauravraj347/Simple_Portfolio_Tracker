@@ -23,7 +23,12 @@ Navigate to the frontend directory and install dependencies:
 
 ```bash
 cd frontend
+```
+```bash
 npm install
+```
+
+```bash
 npm run dev
 ```
 
@@ -31,6 +36,8 @@ Navigate to the Backend directory
 
 ```bash
 cd backend
+```
+```bash
 mvn spring-boot:run
 
 ```
@@ -38,7 +45,6 @@ mvn spring-boot:run
 ### Database Configuration 
 
 Configure a MySQL database instance to store your portfolio data securely and efficiently.
-
 
 
 ![alt text](<Screenshot 2025-01-20 185121.png>)
