@@ -46,6 +46,6 @@ mvn spring-boot:run
 
 Configure a MySQL database instance to store your portfolio data securely and efficiently.
 
-
-![alt text](<Screenshot 2025-01-20 185121.png>)
-![alt text](<Screenshot 2025-01-20 185147.png>)
+![alt text](<Screenshot 2025-01-21 215834.png>)
+![alt text](<Screenshot 2025-01-21 215932.png>)
+![alt text](<Screenshot 2025-01-21 220730.png>)
