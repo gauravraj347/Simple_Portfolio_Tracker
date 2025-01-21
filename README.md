@@ -39,70 +39,7 @@ mvn spring-boot:run
 
 Configure a MySQL database instance to store your portfolio data securely and efficiently.
 
-## 💫 Launch the Application
 
-Start the frontend development server:
 
-```bash
-cd frontend
-npm start
-```
-
-## 🎯 User Journey
-
-### 1. Authentication
-Begin your journey with a secure login process that protects your valuable portfolio data.
-
-### 2. Portfolio Dashboard
-Access your command center – a beautifully designed interface providing:
-- Comprehensive portfolio overview
-- Real-time market values
-- Performance metrics
-- Interactive analytics
-
-### 3. Stock Management
-Take control of your investments:
-- Add new stocks with detailed information
-- Update existing positions
-- Remove holdings with a single click
-- Track performance in real-time
-
-### 4. Portfolio Analysis
-Make informed decisions with:
-- Historical performance tracking
-- Value distribution analysis
-- Gain/loss calculations
-- Market trend insights
-
-## 🌟 Application Workflow
-
-1. **Access the Dashboard**
-   - Log in to your secure account
-   - View your personalized portfolio overview
-
-2. **Manage Investments**
-   - Add new stocks using the intuitive "Add Stock" interface
-   - Input essential details: name, ticker, quantity, and purchase price
-   - Confirm your additions to update your portfolio instantly
-
-3. **Portfolio Maintenance**
-   - Edit stock details as needed
-   - Remove positions that no longer serve your strategy
-   - Track changes in real-time
-
-4. **Performance Monitoring**
-   - Access comprehensive metrics
-   - Analyze portfolio distribution
-   - Monitor value changes
-   - Track investment goals
-
-## 💡 Pro Tips
-
-- Regularly review and update your portfolio
-- Use the real-time tracking features to make informed decisions
-- Take advantage of the analytics tools for deeper insights
-- Keep your investment information current for accurate tracking
-
----
-
-*Elevate your investment strategy with Portfolio Tracker – Where precision meets possibility.*
+![alt text](<Screenshot 2025-01-20 185121.png>)
+![alt text](<Screenshot 2025-01-20 185147.png>)
