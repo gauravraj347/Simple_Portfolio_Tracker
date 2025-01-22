@@ -4,6 +4,6 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
 
-COPY --from=build /target/Stocks-0.0.1-SNAPSHOT.jar Stocks.jar
+COPY --from=build /Backend/target/Stocks-0.0.1-SNAPSHOT.jar Stocks.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "demo.jar"]
