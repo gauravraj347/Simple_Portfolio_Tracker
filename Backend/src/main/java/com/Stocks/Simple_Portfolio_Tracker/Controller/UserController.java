@@ -33,7 +33,7 @@ public class UserController {
 		Optional<User> userOptional = userService.getUserById(id);
 
 		if (userOptional.isPresent()) {
-			return ResponseEntity.ok(userOptional.get()); // Return the user if found
+			return ResponseEntity.ok(userOptional.get());// Return the user if found
 		} else {
 			Map<String, Object> errorResponse = new HashMap<>();
 			errorResponse.put("error", "User Not Found");
