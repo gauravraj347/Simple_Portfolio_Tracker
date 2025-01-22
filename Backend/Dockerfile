@@ -1,9 +1,8 @@
-FROM maven:3.8.5-openjdk AS build
+FROM maven:3.8.5-openjdk-17 AS build
 COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-
-COPY --from=build /backend/target/Stocks-0.0.1-SNAPSHOT.jar Stocks.jar
+COPY --from=build /Backend/target/Simple-Portfolio-Tracker-0.0.1-SNAPSHOT.jar demo.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "demo.jar"]
+ENTRYPOINT ["java","-jar","demo.jar"]
