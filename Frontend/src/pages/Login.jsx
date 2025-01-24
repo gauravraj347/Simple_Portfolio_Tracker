@@ -230,11 +230,6 @@ const Login = () => {
                     />
                 </div>
             </div>
-
-            {/* Footer - Watermark */}
-            <div className="absolute bottom-4 right-4 text-white text-lg font-semibold opacity-50">
-                by Gaurav Raj
-            </div>
         </div>
     );
 };
