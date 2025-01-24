@@ -9,7 +9,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") 
-                .allowedOrigins("https://portfoliotracker-6wd4.onrender.com") // Your frontend's URL
+                .allowedOrigins("https://simple-portfolio-tracker-delta.vercel.app") // Your frontend's URL
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") 
                 .allowedHeaders("*") 
                 .allowCredentials(true); 
