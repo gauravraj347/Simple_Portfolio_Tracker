@@ -157,28 +157,37 @@ const Stocks = () => {
         setNewStock({ name: "", symbol: "", price: "", quantity: "" });
     };
 
-    const handleDisplayStocks = async () => {
+   const handleDisplayStocks = async () => {
+    try {
         const response = await fetch(`https://simple-portfolio-tracker-zxbj.onrender.com/api/stocks/user/${user.id}`);
         if (response.ok) {
             const fetchedStocks = await response.json();
-
-            for (let stock of fetchedStocks) {
-                const priceResponse = await fetch(
-                    `https://api.twelvedata.com/price?symbol=${stock.symbol}&interval=1day&apikey=${import.meta.env.VITE_API_KEY}`
-                );
-                if (priceResponse.ok) {
-                    const priceData = await priceResponse.json();
-                    stock.currentPrice = priceData.price || 0;
-                }
-            }
-
-            setStocks(fetchedStocks);
+            const updatedStocks = await Promise.all(
+                fetchedStocks.map(async (stock) => {
+                    try {
+                        const priceResponse = await fetch(
+                            `https://api.twelvedata.com/price?symbol=${stock.symbol}&apikey=${import.meta.env.VITE_API_KEY}`
+                        );
+                        if (priceResponse.ok) {
+                            const priceData = await priceResponse.json();
+                            return {
+                                ...stock,
+                                currentPrice: priceData.price ? parseFloat(priceData.price) : 0,
+                            };
+                        }
+                    } catch (error) {
+                        console.error(`Error fetching price for ${stock.symbol}:`, error);
+                    }
+                    return { ...stock, currentPrice: 0 }; // Default to 0 if price fetch fails
+                })
+            );
+            setStocks(updatedStocks);
         }
-    };
+    } catch (error) {
+        console.error("Error fetching stocks:", error);
+    }
+};
 
-    useEffect(() => {
-        handleDisplayStocks();
-    }, []);
 
     const totalPortfolioValue = stocks.reduce(
         (acc, stock) => acc + stock.currentPrice * stock.quantity,
