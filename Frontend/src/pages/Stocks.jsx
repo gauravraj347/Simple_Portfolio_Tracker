@@ -204,6 +204,14 @@ const Stocks = () => {
         <div className="p-4 bg-blue-100">
             <div className="flex justify-between items-center bg-white p-2 rounded-lg shadow-lg mb-4">
             <h1 className="text-3xl text-blue-900  font-bold">Portfolio Tracker</h1>
+                <div className="relative inline-block">
+                    <div className="absolute -top-3 left-0 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg border-2 border-red-600 transform -rotate-2">
+                        Note
+                    </div>
+                    <h1 className="text-x bg-yellow-200 px-4 py-2 rounded-lg shadow-lg border-l-4 border-yellow-500">
+                        If Current Price and Portfolio Distribution is not shown, just refresh it!
+                    </h1>
+                </div>
                 <div className="flex items-center space-x-4">
                     <span className="text-2xl font-bold text-lg text-blue-900 text-2xl font-bold">Welcome {user.username}!</span>
                     <button onClick={handleLogout} className="bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 py-2 px-4">
@@ -214,7 +222,7 @@ const Stocks = () => {
             <PortfolioMetrics stocks={stocks} totalPortfolioValue={totalPortfolioValue} topPerformer={topPerformer} />
             
             <div className="bg-white rounded-lg shadow-lg p-1 mb-4">
-                <h2 className="text-x font-bold mb-4">Add New Stock</h2>
+                <h2 className="text-xl font-bold mb-4">Add New Stock</h2>
                 <div className="overflow-x-auto">
                     <table className="min-w-full table-auto border-collapse border border-gray-300">
                         <tbody>
