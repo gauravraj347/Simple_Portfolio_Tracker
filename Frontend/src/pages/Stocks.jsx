@@ -71,7 +71,7 @@ const Stocks = () => {
         // Set default quantity to 1 if not provided
         const stockQuantity = quantity ? parseInt(quantity) : 1;
     
-        const response = await fetch("https://simple-portfolio-tracker-zxbj.onrender.com/api/stocks", {
+        const response = await fetch("https://backend-jh2r.onrender.com/api/stocks", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -94,7 +94,7 @@ const Stocks = () => {
     
     const handleDeleteStock = async (stockId) => {
         const response = await fetch(
-            `https://simple-portfolio-tracker-zxbj.onrender.com/api/stocks/${stockId}`,
+            `https://backend-jh2r.onrender.com/api/stocks/${stockId}`,
             {
                 method: "DELETE",
             }
@@ -124,7 +124,7 @@ const Stocks = () => {
         }
 
         const response = await fetch(
-            `https://simple-portfolio-tracker-zxbj.onrender.com/api/stocks/${editingStockId}`,
+            `https://backend-jh2r.onrender.com/api/stocks/${editingStockId}`,
             {
                 method: "PUT",
                 headers: {
@@ -158,7 +158,7 @@ const Stocks = () => {
     };
 
     const handleDisplayStocks = async () => {
-        const response = await fetch(`https://simple-portfolio-tracker-zxbj.onrender.com/api/stocks/user/${user.id}`);
+        const response = await fetch(`https://backend-jh2r.onrender.com/api/stocks/user/${user.id}`);
         if (response.ok) {
             const fetchedStocks = await response.json();
 
@@ -222,7 +222,7 @@ const Stocks = () => {
             <PortfolioMetrics stocks={stocks} totalPortfolioValue={totalPortfolioValue} topPerformer={topPerformer} />
             
             <div className="bg-white rounded-lg shadow-lg p-1 mb-4">
-                <h2 className="text-xl font-bold mb-4">Add New Stock</h2>
+                <h2 className="text-xl font-bold ml-4 mb-4">Add New Stock</h2>
                 <div className="overflow-x-auto">
                     <table className="min-w-full table-auto border-collapse border border-gray-300">
                         <tbody>
@@ -385,4 +385,3 @@ const Stocks = () => {
 };
 
 export default Stocks;
-
