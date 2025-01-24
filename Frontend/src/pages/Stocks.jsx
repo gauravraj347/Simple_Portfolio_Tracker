@@ -71,7 +71,7 @@ const Stocks = () => {
         // Set default quantity to 1 if not provided
         const stockQuantity = quantity ? parseInt(quantity) : 1;
     
-        const response = await fetch("https://backend-jh2r.onrender.com/api/stocks", {
+        const response = await fetch("https://simple-portfolio-tracker-zxbj.onrender.com/api/stocks", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -94,7 +94,7 @@ const Stocks = () => {
     
     const handleDeleteStock = async (stockId) => {
         const response = await fetch(
-            `https://backend-jh2r.onrender.com/api/stocks/${stockId}`,
+            `https://simple-portfolio-tracker-zxbj.onrender.com/api/stocks/${stockId}`,
             {
                 method: "DELETE",
             }
@@ -124,7 +124,7 @@ const Stocks = () => {
         }
 
         const response = await fetch(
-            `https://backend-jh2r.onrender.com/api/stocks/${editingStockId}`,
+            `https://simple-portfolio-tracker-zxbj.onrender.com/api/stocks/${editingStockId}`,
             {
                 method: "PUT",
                 headers: {
@@ -158,7 +158,7 @@ const Stocks = () => {
     };
 
     const handleDisplayStocks = async () => {
-        const response = await fetch(`https://backend-jh2r.onrender.com/api/stocks/user/${user.id}`);
+        const response = await fetch(`https://simple-portfolio-tracker-zxbj.onrender.com/api/stocks/user/${user.id}`);
         if (response.ok) {
             const fetchedStocks = await response.json();
 
