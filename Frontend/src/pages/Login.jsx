@@ -66,7 +66,7 @@ const Login = () => {
         setIsLoading(true); // Start loading
 
         try {
-            const response = await fetch("https://backend-jh2r.onrender.com/api/users");
+            const response = await fetch("https://simple-portfolio-tracker-zxbj.onrender.com/api/users");
             if (response.ok) {
                 const users = await response.json();
                 const foundUser = users.find(
@@ -102,7 +102,7 @@ const Login = () => {
         setIsLoading(true); // Start loading
 
         try {
-            const response = await fetch("https://backend-jh2r.onrender.com/api/users", {
+            const response = await fetch("https://simple-portfolio-tracker-zxbj.onrender.com/api/users", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
